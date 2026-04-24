@@ -69,7 +69,7 @@ const Main = ({boxStyle,city}) => {
                 </>
             ) :  (
               <div className="col-span-12 text-center py-20 text-xl font-bold">
-                날씨 데이터를 불러오는 중입니다...
+                날씨 데이터를 불러오는 중입니다~~
               </div>
             )
             }

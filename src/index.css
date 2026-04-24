@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+
+@layer utilities {
+  .animate-gradient-flow {
+    animation: gradient-flow 3s linear infinite;
+  }
+
+  @keyframes gradient-flow {
+    0% { background-position: 200% center; }
+    100% { background-position: 0% center; }
+  }
+} 
+@theme {
+  /* 여기서 바로 변수를 등록하면 Tailwind 클래스가 생성됩니다 */
+  --color-brand-color: #002454;
+  --color-sub-color:#E5CDB5;
+  --color-point-color:#80BAFF;
+  --color-sale-color:#FE2B00;
+  --max-width-inner: 1440px;
+}
+
+@layer components {
+  .inner {
+    @apply max-w-(--max-width-inner) mx-auto px-[20px] w-full overflow-hidden;
+  }
+}
+
+body {
+  font-family: 'pretendard', sans-serif;
+  /* 안티앨리어싱(글자를 매끄럽게) 설정도 같이 해주면 좋아요 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
